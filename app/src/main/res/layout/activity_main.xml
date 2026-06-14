@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity"
+    tools:ignore="MissingClass"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome_to_neat_roots"
+        android:textSize="36sp"
+        android:textStyle="normal"
+        android:textColor="@color/cardview_light_background"
+        android:background="@color/design_default_color_secondary_variant"
+        android:paddingStart="40dp"
+        android:paddingEnd="6dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hellow_neat_roots"
+        android:textSize="36sp"
+        android:textStyle="normal"
+        android:textColor="@color/cardview_light_background"
+        android:background="@color/design_default_color_secondary_variant"
+        android:paddingStart="40dp"
+        android:paddingEnd="6dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="save playlist"
+        android:textSize="36sp"
+        android:textStyle="normal"
+        android:textColor="@color/cardview_light_background"
+        android:background="@color/design_default_color_secondary_variant"
+
+        android:gravity="center_vertical"
+
+        />
+
+
+</LinearLayout>

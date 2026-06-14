@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F6F8">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="AgroVision"
+            android:textColor="#2E7D32"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="AI Based Crop Recommendation"
+            android:textColor="#555555"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_marginBottom="20dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select Season"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="12dp"/>
+
+                <RadioGroup
+                    android:id="@+id/seasonRadioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <RadioButton
+                        android:id="@+id/radioKharif"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Kharif"
+                        android:checked="true"/>
+
+                    <RadioButton
+                        android:id="@+id/radioRabi"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Rabi" />
+
+                    <RadioButton
+                        android:id="@+id/radioZaid"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Zaid" />
+                </RadioGroup>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Climate Metrics"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="16dp"/>
+
+                <EditText
+                    android:id="@+id/etTemperature"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Temperature (°C)"
+                    android:inputType="numberDecimal"
+                    android:layout_marginBottom="12dp"/>
+
+                <EditText
+                    android:id="@+id/etHumidity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Humidity (%)"
+                    android:inputType="numberDecimal"
+                    android:layout_marginBottom="12dp"/>
+
+                <EditText
+                    android:id="@+id/etRainfall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Rainfall (mm)"
+                    android:inputType="numberDecimal"
+                    android:layout_marginBottom="20dp"/>
+
+                <Button
+                    android:id="@+id/btnAnalyze"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Analyze Data"
+                    android:backgroundTint="#2E7D32"
+                    android:textColor="#FFFFFF" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/resultCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:visibility="gone"
+            app:cardCornerRadius="12dp"
+            app:cardBackgroundColor="#E8F5E9"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tvRecommendedCrop"
+                    android:layout_width="wrap_width"
+                    android:layout_height="wrap_content"
+                    android:text="Recommended Crop: Rice"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#2E7D32"/>
+
+                <TextView
+                    android:id="@+id/tvPredictedPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Expected Market Price: ₹ 2200/qtl"
+                    android:textSize="16sp"
+                    android:layout_marginTop="8dp"
+                    android:textColor="#333333"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Farmer Knowledge Hub"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="8dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:cardCornerRadius="8dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="💧 Irrigation Control"
+                    android:textStyle="bold"
+                    android:textColor="#1565C0"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Rice needs high water (>200mm). If rainfall is low, consider pulses."
+                    android:textSize="13sp"
+                    android:layout_marginTop="4dp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:cardCornerRadius="8dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="☀️ Temperature Tips"
+                    android:textStyle="bold"
+                    android:textColor="#E65100"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Protect crops from heat stress when temp crosses 45°C."
+                    android:textSize="13sp"
+                    android:layout_marginTop="4dp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>
